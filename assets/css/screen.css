@@ -1242,6 +1242,37 @@ body:not(.post-template) .post-title {
 }
 
 
+.post-content input, 
+.post-content textarea
+{
+    display: block;
+    padding: 8px 10px;
+    width: 100%;
+    border: 1px solid #E0DFD7;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #242628;
+    -webkit-transition: border-color 0.15s linear;
+    transition: border-color 0.15s linear;
+}
+.post-content textarea
+{
+    resize:none;
+}
+
+.post-content #submit-contact {
+    display: inline-block;
+    width: auto;
+    background: transparent;
+    color: #9EABB3;
+    border: 1px solid #BFC8CD;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.5s ease;
+}
+
 /* ==========================================================================
    6. Author profile
    ========================================================================== */

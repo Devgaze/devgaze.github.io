@@ -11,10 +11,10 @@
 
     <link rel="shortcut icon" href="../favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=cbea40e838">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=ca5351c136">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
     
-    <link rel="canonical" href="index.html">
+    <link rel="canonical" href="http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/">
     
     <meta property="og:site_name" content="Developer's Gaze">
     <meta property="og:type" content="article">
@@ -23,7 +23,7 @@
     <meta property="og:url" content="http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/">
     <meta property="og:image" content="http://localhost:2368/content/images/2015/09/ghostbusters_marshmallowman.jpg">
     <meta property="article:published_time" content="2015-09-01T15:51:37.473Z">
-    <meta property="article:modified_time" content="2015-09-04T08:14:49.212Z">
+    <meta property="article:modified_time" content="2015-09-05T17:45:50.920Z">
     <meta property="article:tag" content="Ghost">
     <meta property="article:tag" content="Git">
     
@@ -48,7 +48,7 @@
     "headline": "Setting up Ghost, Buster and GitHub Pages on MacOS [Yosemite]",
     "url": "http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/",
     "datePublished": "2015-09-01T15:51:37.473Z",
-    "dateModified": "2015-09-04T08:14:49.212Z",
+    "dateModified": "2015-09-05T17:45:50.920Z",
     "image": "http://localhost:2368/content/images/2015/09/ghostbusters_marshmallowman.jpg",
     "keywords": "Ghost, Git",
     "description": "Setup your blogging with cutting-edge technologies in few simple steps."
@@ -66,8 +66,9 @@
         <span class="hidden">Close</span>
     </a>
     <ul>
-            <li class="nav-blog" role="presentation"><a href="../">Blog</a></li>
+            <li class="nav-blog" role="presentation"><a href="http://localhost:2368/">Blog</a></li>
             <li class="nav-about" role="presentation"><a href="../about/">About</a></li>
+            <li class="nav-contact" role="presentation"><a href="../contact-me/">Contact</a></li>
     </ul>
     <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
 </div>
@@ -81,7 +82,7 @@
 
 <header class="main-header post-head " style="background-image: url(../content/images/2015/09/ghostbusters_marshmallowman.jpg)">
     <nav class="main-nav overlay clearfix">
-        <a class="blog-logo" href="../"><img src="../content/images/2015/09/only-sign.png" alt="Developer's Gaze"></a>
+        <a class="blog-logo" href="http://localhost:2368"><img src="../content/images/2015/09/only-sign.png" alt="Developer's Gaze"></a>
             <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
     </nav>
 </header>
@@ -103,131 +104,145 @@
 
 <p>Now, when I am going through a lot of changes both in my professional and personal life, there's a <em>publisher's spark</em> in me that feels right. So I took one day to do a research on blog engines and static site generators, and it was not that hard to do it.</p>
 
-<p>I've found a setup that fits me quite well. It is combined out of 3 components:</p>
+<p>I've found a setup that fits me quite well, combined out of these 3 components:</p>
 
 <ul>
-<li><a href="index.html#github-pages">GitHub Pages</a></li>
-<li><a href="index.html#ghost">Ghost blogging platform</a></li>
-<li><a href="index.html#buster">Buster static content generator</a></li>
+<li><a href="https://pages.github.com/">GitHub Pages</a></li>
+<li><a href="https://ghost.org/">Ghost blogging platform</a></li>
+<li><a href="https://github.com/joshgerdes/buster">Buster static content generator</a></li>
 </ul>
 
-<p><small><em>If you just want to see the setup, feel free to <a href="index.html#setup">skip the introductory text</a></em>.</small></p>
+<p><strong>NOTE:</strong> Even though Buster is originally written by <a href="https://github.com/axitkhurana/buster">Akshit Khurana</a>, I am using <a href="https://github.com/joshgerdes/buster">Josh Gerdes's fork</a> as it contains few important updates and, at the time of writing this article, it is 4 commits ahead of Akshit's.</p>
 
-<h4 id="githubpages">GitHub Pages</h4>
+<!--  
+* [GitHub Pages](#github-pages)
+* [Ghost blogging platform](#ghost)
+* [Buster static content generator](#buster)
 
-<p>As a web developer I honestly support open source community, and what is a better place than <a href="https://github.com/">GitHub</a>. GitHub provides a service called <strong>GitHub Pages</strong>, which enables you or your project a place to host a static web content (website or a blog).</p>
+<small>*If you just want to see the setup, feel free to [skip the introductory text](#setup)*.</small>
 
-<p>From developer's perspective this approach provides multiple benefits. For example, when you apply for new job, companies will often ask you your GitHub account so they can check your coding style and skill level. Not so often (it happened to me twice so far) they'll ask about your blog, interested in your way of thinking and industry savviness. By using GitHub Pages you have it all in one place. </p>
+####GitHub Pages
 
-<p><a href="https://pages.github.com/">Learn more</a> on GitHub Pages official website.</p>
+As a web developer I honestly support open source community, and what is a better place than [GitHub](https://github.com/). GitHub provides a service called **GitHub Pages**, which enables you or your project a place to host a static web content (website or a blog).
 
-<h4 id="ghost">Ghost</h4>
+From developer's perspective this approach provides multiple benefits. For example, when you apply for new job, companies will often ask you your GitHub account so they can check your coding style and skill level. Not so often (it happened to me twice so far) they'll ask about your blog, interested in your way of thinking and industry savviness. By using GitHub Pages you have it all in one place. 
 
-<p>Now, GitHub Pages website promotes <a href="http://jekyllrb.com/">Jekyll</a> which is really powerful static site generator, but most of it's plugins won't work inside of GitHub Pages. One of the main things I was paying attention while deciding on which blogging platform to use was <strong>workflow</strong>.</p>
+[Learn more](https://pages.github.com/) on GitHub Pages official website.
 
-<p>And Ghost came as the best choice. Key features that made up my mind were:</p>
+####Ghost
 
-<ul>
-<li>editor - fast, beautiful and to the point (when I saw it, I knew I want to use it)</li>
-<li>the whole application - nothing is in your way and all you need is there</li>
-<li>themes - no need to spend time on internals like tag filtering or pagination and RSS</li>
-</ul>
+Now, GitHub Pages website promotes [Jekyll](http://jekyllrb.com/) which is really powerful static site generator, but most of it's plugins won't work inside of GitHub Pages. One of the main things I was paying attention while deciding on which blogging platform to use was **workflow**.
 
-<p>Ghost is <strong>Node.js</strong> based application and child of <strong>John O'Nolan</strong>, former deputy head of the Wordpress UI group, so no wonder that John and his team have done a great job!</p>
+And Ghost came as the best choice. Key features that made up my mind were:
 
-<p>But... :) .... Ghost is not static content generator (<em>remember GitHub Pages serves only static content</em>).</p>
+* editor - fast, beautiful and to the point (when I saw it, I knew I want to use it)
+* the whole application - nothing is in your way and all you need is there
+* themes - no need to spend time on internals like tag filtering or pagination and RSS
 
-<p>So, who you gonna call?</p>
+Ghost is **Node.js** based application and child of **John O'Nolan**, former deputy head of the Wordpress UI group, so no wonder that John and his team have done a great job!
 
-<p><small>For more detailed information on Ghost, please <a href="http://support.ghost.org/user-guide/">take a look at official user guide</a>.</small></p>
+But... :) .... Ghost is not static content generator (*remember GitHub Pages serves only static content*).
 
-<h4 id="buster">Buster</h4>
+So, who you gonna call?
 
-<p>Buster is <strong>Python package</strong>, developed by <a href="https://github.com/axitkhurana/buster">Akshit Khurana</a>, that serves as static content generator for Ghost. In my setup I am using <a href="https://github.com/joshgerdes/buster">Josh Gerdes's fork</a> as, at the time of writing this article, his repo is 4 commits ahead of Akshit's, containing some important fixes.</p>
+<small>For more detailed information on Ghost, please [take a look at official user guide](http://support.ghost.org/user-guide/).</small>
+
+####Buster
+
+Buster is **Python package**, developed by [Akshit Khurana](https://github.com/axitkhurana/buster), that serves as static content generator for Ghost. In my setup I am using [Josh Gerdes's fork](https://github.com/joshgerdes/buster) as, at the time of writing this article, his repo is 4 commits ahead of Akshit's, containing some important fixes.  
+-->
 
 <h2 id="setup">Setup</h2>
 
 <p>Before we start, we have to meet some requirements.</p>
 
-<p>Ghost is built using <em>Node.js</em> and it will need <em>npm</em> package manager for installation and server startup.</p>
+<ul>
+<li><p>Ghost is built using <strong>Node.js</strong> and it will need <em>npm</em> package manager for installation and server startup.</p></li>
+<li><p>Buster is <strong>Python package</strong>, so we'll use <code>pip</code>. </p></li>
+<li><p>Using GitHub expects you have <code>git</code> installed also. </p></li>
+<li><p>Also you will need to install latest XCode for some libraries, unless you already have it.</p></li>
+</ul>
 
-<p>Buster is Python package, so we'll use <em>PIP</em>. <em>Python</em> comes pre-installed on MacOs systems and <a href="index.html">for PIP follow this how to guide</a>.</p>
+<p>Once you believe you are all set, just do a sanity check:</p>
 
-<p>Git should also be available on your system, but if it's not <a href="index.html">use Homebrew to install</a> it or do it in your prefered way. </p>
+<p><img src="../content/images/2015/09/sanity-check.png" alt=""></p>
 
-<p>Also you will need to install latest XCode for some libraries, unless you already have it.</p>
-
-<h4 id="requirements">Requirements</h4>
+<h2 id="prepareagithubpage">Prepare a GitHub Page</h2>
 
 <ol>
-<li><p>Let's start with Node.js and npm. You can download latest package from <a href="http://nodejs.org/">http://nodejs.org/</a> then run it and setup $PATH variable or you can just use Homebrew (like me) and type:</p>
+<li><p>Assuming all went well head over to <a href="https://github.com/">https://github.com/</a> and sign in if needed. Then in upper right corner click on <code>+</code> sign and choose <strong>New repository</strong>.</p>
 
-<pre><code>brew install node
-</code></pre>
+<p><img src="../content/images/2015/09/new-repo.png" alt="Create new repo" title=""></p></li>
+<li><p>Then type in your GitHub username followed by <strong>.github.io</strong> (check the picture below) and click <em>Create repository</em></p>
 
-<p>Sweet! Now just check if everything is in order.</p>
+<p><img src="../content/images/2015/09/githubrepo.png" alt="github pages" title=""></p></li>
+</ol>
 
-<pre><code>devgaze@ node --version
-v0.12.2
-devgaze@ npm --version
-2.7.5
+<h2 id="installghost">Install Ghost</h2>
+
+<ol>
+<li><p>Let's create our project root first</p>
+
+<pre><code>mkdir ~/dev/ghost
 </code></pre></li>
-<li><p>Next comes up <code>pip</code>.</p></li>
-<li>Once you are ready, let's check our environment, type in your terminal.  
-   <!-- script src="https://gist.github.com/Devgaze/8bd720cfb7c5088c67bc.js"></script -->
-
-<pre><code>devgaze@ node --version
-v0.12.2
-devgaze@ npm --version
-2.7.5
-devgaze@ pip --version
-pip 6.1.1 from /Library/Python/2.7/site-packages (python 2.7)
-devgaze@ git --version
-git version 2.3.2 (Apple Git-55)
-</code></pre></li>
-<li><p>Great! Let's create our project root</p>
-
-<pre><code>devgaze@ mkdir ~/dev/ghost
-</code></pre></li>
-<li><p>Now let's install Ghost, go to downloads page and <a href="https://ghost.org/download/">download the latest release</a></p></li>
+<li><p>Now go to Ghost's download page and <a href="https://ghost.org/download/">download the latest release</a></p></li>
 <li><p>Unzip it inside <code>~/dev/ghost</code></p></li>
 <li><p>Install Ghost with <code>--production</code> flag </p>
 
-<pre><code>devgaze@ npm install --production
+<pre><code>npm install --production
 </code></pre></li>
-<li><p>When it's all done, run Ghost</p>
+<li><p>When it's all done, run Ghost using <code>npm start</code></p>
 
-<pre><code>devgaze@ npm start
-
-
-&gt; ghost@0.6.4 start /Users/alennovakovic/dev/ghost
-&gt; node index
-
-
-Migrations: Up to date at version 003
-Ghost is running in development... 
-Listening on 127.0.0.1:2368 
-Url configured as: http://localhost:2368 
-Ctrl+C to shut down
-</code></pre></li>
-<li><p>Now you can visit your Ghost site at <a href="../">http://localhost:2368</a> and your admin part at <a href="http://localhost:2368/ghost/">http://localhost:2368/ghost/</a></p></li>
-<li><p>Next we need to install <em>Buster</em>, our static content generator. But before that, we'll need to make sure we have <code>wget</code> installed on our system as Buster depends on it. If not, use your system package manager to install it (brew, apt, etc.) </p>
-
-<pre><code>devgaze@ brew install wget
-devgaze@ wget --version
-GNU Wget 1.16.3 built on darwin14.1.0.
-    +digest +https +ipv6 -iri +large-file -nls +ntlm +opie -psl +ssl/openssl 
-...
-devgaze@ pip install buster
-</code></pre></li>
-<li><p>Ok now we have blog and generator all set up, now we just need to make new Git repository to host our site. So, head to your GitHub account click on <code>+</code> sign in upper right corner and choose <strong>New repository</strong>. Then type in your GitHub username followed by .github.io (check the picture below) and click <em>Create repository</em></p></li>
+<p><img src="../content/images/2015/09/start-ghost.png" alt="start ghost" title=""></p></li>
+<li><p>Now you can visit your Ghost site at <a href="http://localhost:2368">http://localhost:2368</a> and your admin part at <a href="http://localhost:2368/ghost/">http://localhost:2368/ghost/</a></p></li>
 </ol>
 
-<p><img src="../content/images/2015/09/githubrepo.png" alt="github pages"></p>
+<h2 id="installbuster">Install Buster</h2>
 
 <ol>
-10. 
+<li><p>Buster uses application called <code>wget</code> and we have to make sure it is installed on our system before we proceed.</p>
+
+<pre><code>brew install wget 
+</code></pre></li>
+<li><p>And now we are all set for Buster installation</p>
+
+<pre><code>pip install buster
+</code></pre></li>
+<li><p>Now we just need to connect buster with our GitHub Pages, make sure you are inside <code>~/dev/ghost</code> <br>
+<img src="../content/images/2015/09/buster-setup.png" alt="buster setup" title=""></p></li>
 </ol>
+
+<p>Now Buster will create new folder <code>static</code> and initialise it with provided repository.</p>
+
+<h2 id="deployingcontenttogithub">Deploying content to GitHub</h2>
+
+<ol>
+<li>Head over to ghost and create a post or two.  </li>
+<li><p>Then in your terminal type</p>
+
+<pre><code>buster generate 
+</code></pre></li>
+<li><p>After generate finishes converting Ghost content into static pages, you can preview them using <code>buster preview</code> and then visiting <a href="../">http://localhost:9000/</a> <br>
+<img src="../content/images/2015/09/buster-serving.png" alt="buster serving" title=""></p></li>
+<li><p>Once you are satisfied with the output, go ahead and deploy it to GitHub </p>
+
+<pre><code>buster deploy
+</code></pre></li>
+</ol>
+
+<p>And, that's it!</p>
+
+<h2 id="furtheractions">Further actions</h2>
+
+<ol>
+<li><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/">Add custom domain</a> to your website  </li>
+<li><a href="http://marketplace.ghost.org/">Change the look and feel</a> of your website with predefined themes  </li>
+<li><a href="index.html">Add contact form</a> to your website</li>
+</ol>
+
+<p>If you have any questions or suggestions just drop it into comment, I'd love to explain or learn something new.</p>
+
+<p>Cheers!</p>
 
 <hr>
 
@@ -270,21 +285,27 @@ devgaze@ pip install buster
 </main>
 
 <aside class="read-next">
+    <a class="read-next-story no-cover" href="../add-contact-page-to-ghost-powered-github-pages-with-flipmail/">
+        <section class="post">
+            <h2>Add contact page to Ghost powered GitHub Pages with Flipmail</h2>
+            <p>GitHub Pages serve only static content so in order to have a Contact page you need to use external…</p>
+        </section>
+    </a>
 </aside>
 
 
 
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href="../">Developer's Gaze</a> © 2015</section>
+            <section class="copyright"><a href="http://localhost:2368">Developer's Gaze</a> © 2015</section>
             <!-- <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section> -->
         </footer>
 
     </div>
 
-    <script src="../public/jquery.js?v=cbea40e838"></script>
+    <script src="../public/jquery.js?v=ca5351c136"></script>
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=cbea40e838"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=cbea40e838"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=ca5351c136"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=ca5351c136"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">&lt;/script>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
