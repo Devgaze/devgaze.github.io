@@ -1,1 +1,135 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Developer's Gaze</title><description>Code. Sail. Live.</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 02 Sep 2015 08:12:26 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Installing MongoDB on MacOs (Yosemite)</title><description>&lt;p&gt;(draft)&lt;/p&gt;</description><link>http://localhost:2368/installing-mongodb-on-macos-yosemite/</link><guid isPermaLink="false">37760d16-d3f1-4e08-ba22-240834321414</guid><category>MongoDB</category><dc:creator>Devgaze</dc:creator><pubDate>Tue, 01 Sep 2015 16:39:27 GMT</pubDate><content:encoded>&lt;p&gt;(draft)&lt;/p&gt;</content:encoded></item><item><title>Setting up Ghost, Buster and GitHub pages</title><description>&lt;p&gt;&lt;small&gt;(Image author &lt;a href="https://www.flickr.com/photos/infobunny/6857827747/sizes/o/"&gt;Poppet with a camera&lt;/a&gt; - found on &lt;a href="https://www.flickr.com/"&gt;Flickr&lt;/a&gt; )&lt;/small&gt;&lt;/p&gt;</description><link>http://localhost:2368/settings-up-ghost-buster-and-github-pages/</link><guid isPermaLink="false">d3e03736-4c0e-41fa-bf1b-6efba8f3a50c</guid><category>Ghost</category><category>Git</category><dc:creator>Devgaze</dc:creator><pubDate>Tue, 01 Sep 2015 15:51:37 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/09/ghostbusters_marshmallowman.jpg" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/09/ghostbusters_marshmallowman.jpg" alt="Setting up Ghost, Buster and GitHub pages"&gt;&lt;p&gt;&lt;small&gt;(Image author &lt;a href="https://www.flickr.com/photos/infobunny/6857827747/sizes/o/"&gt;Poppet with a camera&lt;/a&gt; - found on &lt;a href="https://www.flickr.com/"&gt;Flickr&lt;/a&gt; )&lt;/small&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Developer's Gaze</title><description>Code. Sail. Live.</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Sat, 05 Sep 2015 16:29:20 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Setting up Ghost, Buster and GitHub Pages on MacOS [Yosemite]</title><description>Setup your blogging with cutting-edge technologies in few simple steps.</description><link>http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/</link><guid isPermaLink="false">d3e03736-4c0e-41fa-bf1b-6efba8f3a50c</guid><category>Ghost</category><category>Git</category><dc:creator>Devgaze</dc:creator><pubDate>Tue, 01 Sep 2015 15:51:37 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/09/ghostbusters_marshmallowman.jpg" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/09/ghostbusters_marshmallowman.jpg" alt="Setting up Ghost, Buster and GitHub Pages on MacOS [Yosemite]"&gt;&lt;p&gt;In the last 5-8 years, I am not sure for how many times did I try to start to blog. It was always something in my way; not sure what to write about, not fully satisfied with blogging platform, editor sucked, deployment was a pain, etc.&lt;/p&gt;
+
+&lt;p&gt;In short it was just a lack of my interest.&lt;/p&gt;
+
+&lt;p&gt;Now, when I am going through a lot of changes both in my professional and personal life, there's a &lt;em&gt;publisher's spark&lt;/em&gt; in me that feels right. So I took one day to do a research on blog engines and static site generators, and it was not that hard to do it.&lt;/p&gt;
+
+&lt;p&gt;I've found a setup that fits me quite well. It is combined out of 3 components:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/#github-pages"&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/#ghost"&gt;Ghost blogging platform&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/#buster"&gt;Buster static content generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;em&gt;If you just want to see the setup, feel free to &lt;a href="http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/#setup"&gt;skip the introductory text&lt;/a&gt;&lt;/em&gt;.&lt;/small&gt;&lt;/p&gt;
+
+&lt;h4 id="githubpages"&gt;GitHub Pages&lt;/h4&gt;
+
+&lt;p&gt;As a web developer I honestly support open source community, and what is a better place than &lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;. GitHub provides a service called &lt;strong&gt;GitHub Pages&lt;/strong&gt;, which enables you or your project a place to host a static web content (website or a blog).&lt;/p&gt;
+
+&lt;p&gt;From developer's perspective this approach provides multiple benefits. For example, when you apply for new job, companies will often ask you your GitHub account so they can check your coding style and skill level. Not so often (it happened to me twice so far) they'll ask about your blog, interested in your way of thinking and industry savviness. By using GitHub Pages you have it all in one place. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://pages.github.com/"&gt;Learn more&lt;/a&gt; on GitHub Pages official website.&lt;/p&gt;
+
+&lt;h4 id="ghost"&gt;Ghost&lt;/h4&gt;
+
+&lt;p&gt;Now, GitHub Pages website promotes &lt;a href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; which is really powerful static site generator, but most of it's plugins won't work inside of GitHub Pages. One of the main things I was paying attention while deciding on which blogging platform to use was &lt;strong&gt;workflow&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;And Ghost came as the best choice. Key features that made up my mind were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;editor - fast, beautiful and to the point (when I saw it, I knew I want to use it)&lt;/li&gt;
+&lt;li&gt;the whole application - nothing is in your way and all you need is there&lt;/li&gt;
+&lt;li&gt;themes - no need to spend time on internals like tag filtering or pagination and RSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ghost is &lt;strong&gt;Node.js&lt;/strong&gt; based application and child of &lt;strong&gt;John O'Nolan&lt;/strong&gt;, former deputy head of the Wordpress UI group, so no wonder that John and his team have done a great job!&lt;/p&gt;
+
+&lt;p&gt;But... :) .... Ghost is not static content generator (&lt;em&gt;remember GitHub Pages serves only static content&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;So, who you gonna call?&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;For more detailed information on Ghost, please &lt;a href="http://support.ghost.org/user-guide/"&gt;take a look at official user guide&lt;/a&gt;.&lt;/small&gt;&lt;/p&gt;
+
+&lt;h4 id="buster"&gt;Buster&lt;/h4&gt;
+
+&lt;p&gt;Buster is &lt;strong&gt;Python package&lt;/strong&gt;, developed by &lt;a href="https://github.com/axitkhurana/buster"&gt;Akshit Khurana&lt;/a&gt;, that serves as static content generator for Ghost. In my setup I am using &lt;a href="https://github.com/joshgerdes/buster"&gt;Josh Gerdes's fork&lt;/a&gt; as, at the time of writing this article, his repo is 4 commits ahead of Akshit's, containing some important fixes.&lt;/p&gt;
+
+&lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;Before we start, we have to meet some requirements.&lt;/p&gt;
+
+&lt;p&gt;Ghost is built using &lt;em&gt;Node.js&lt;/em&gt; and it will need &lt;em&gt;npm&lt;/em&gt; package manager for installation and server startup.&lt;/p&gt;
+
+&lt;p&gt;Buster is Python package, so we'll use &lt;em&gt;PIP&lt;/em&gt;. &lt;em&gt;Python&lt;/em&gt; comes pre-installed on MacOs systems and &lt;a href="http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/"&gt;for PIP follow this how to guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Git should also be available on your system, but if it's not &lt;a href="http://localhost:2368/setting-up-ghost-buster-and-github-pages-on-macos/"&gt;use Homebrew to install&lt;/a&gt; it or do it in your prefered way. &lt;/p&gt;
+
+&lt;p&gt;Also you will need to install latest XCode for some libraries, unless you already have it.&lt;/p&gt;
+
+&lt;h4 id="requirements"&gt;Requirements&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Let's start with Node.js and npm. You can download latest package from &lt;a href="http://nodejs.org/"&gt;http://nodejs.org/&lt;/a&gt; then run it and setup $PATH variable or you can just use Homebrew (like me) and type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install node
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sweet! Now just check if everything is in order.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;devgaze@ node --version
+v0.12.2
+devgaze@ npm --version
+2.7.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Next comes up &lt;code&gt;pip&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Once you are ready, let's check our environment, type in your terminal.  
+   &lt;!-- script src="https://gist.github.com/Devgaze/8bd720cfb7c5088c67bc.js"&gt;&lt;/script --&gt;
+
+&lt;pre&gt;&lt;code&gt;devgaze@ node --version
+v0.12.2
+devgaze@ npm --version
+2.7.5
+devgaze@ pip --version
+pip 6.1.1 from /Library/Python/2.7/site-packages (python 2.7)
+devgaze@ git --version
+git version 2.3.2 (Apple Git-55)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Great! Let's create our project root&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;devgaze@ mkdir ~/dev/ghost
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Now let's install Ghost, go to downloads page and &lt;a href="https://ghost.org/download/"&gt;download the latest release&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Unzip it inside &lt;code&gt;~/dev/ghost&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Install Ghost with &lt;code&gt;--production&lt;/code&gt; flag &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;devgaze@ npm install --production
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When it's all done, run Ghost&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;devgaze@ npm start
+
+
+&amp;gt; ghost@0.6.4 start /Users/alennovakovic/dev/ghost
+&amp;gt; node index
+
+
+Migrations: Up to date at version 003
+Ghost is running in development... 
+Listening on 127.0.0.1:2368 
+Url configured as: http://localhost:2368 
+Ctrl+C to shut down
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Now you can visit your Ghost site at &lt;a href="http://localhost:2368"&gt;http://localhost:2368&lt;/a&gt; and your admin part at &lt;a href="http://localhost:2368/ghost/"&gt;http://localhost:2368/ghost/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Next we need to install &lt;em&gt;Buster&lt;/em&gt;, our static content generator. But before that, we'll need to make sure we have &lt;code&gt;wget&lt;/code&gt; installed on our system as Buster depends on it. If not, use your system package manager to install it (brew, apt, etc.) &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;devgaze@ brew install wget
+devgaze@ wget --version
+GNU Wget 1.16.3 built on darwin14.1.0.
+    +digest +https +ipv6 -iri +large-file -nls +ntlm +opie -psl +ssl/openssl 
+...
+devgaze@ pip install buster
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ok now we have blog and generator all set up, now we just need to make new Git repository to host our site. So, head to your GitHub account click on &lt;code&gt;+&lt;/code&gt; sign in upper right corner and choose &lt;strong&gt;New repository&lt;/strong&gt;. Then type in your GitHub username followed by .github.io (check the picture below) and click &lt;em&gt;Create repository&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2015/09/githubrepo.png" alt="Setting up Ghost, Buster and GitHub Pages on MacOS [Yosemite]"&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+10. 
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;small&gt;(Image author &lt;a href="https://www.flickr.com/photos/infobunny/6857827747/sizes/o/"&gt;Poppet with a camera&lt;/a&gt; - found on &lt;a href="https://www.flickr.com/"&gt;Flickr&lt;/a&gt; )&lt;/small&gt;&lt;/p&gt;</content:encoded></item></channel></rss>

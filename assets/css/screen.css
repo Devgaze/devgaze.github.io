@@ -1218,6 +1218,7 @@ body:not(.post-template) .post-title {
   position: relative;
   overflow: hidden;
   text-decoration: none;
+  color: navy;
 }
 .post-content a:before {
   content: "";
@@ -1226,7 +1227,7 @@ body:not(.post-template) .post-title {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #4A4A4A;
+  background: navy;
   height: 1px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
