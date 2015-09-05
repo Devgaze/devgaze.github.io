@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Developer's Gaze</title><description>Code. Sail. Live.</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Sat, 05 Sep 2015 20:48:41 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Add contact page to Ghost powered GitHub Pages with Flipmail</title><description>&lt;p&gt;GitHub Pages serve only static content so in order to have a &lt;em&gt;Contact&lt;/em&gt; page you need to use external service to process your contact form submissions. Some sources on the internet suggest to use &lt;a href="http://formspree.io/"&gt;Formspree&lt;/a&gt; developed and maintained by &lt;a href="http://assembly.com/"&gt;Assembly community&lt;/a&gt; (link on Formspree is broken so I am linking&lt;/p&gt;</description><link>http://localhost:2368/add-contact-page-to-ghost-powered-github-pages-with-flipmail/</link><guid isPermaLink="false">f0e1eb2a-4027-4c9d-b498-b343f8f7aa77</guid><dc:creator>Devgaze</dc:creator><pubDate>Sat, 05 Sep 2015 20:06:24 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Pages serve only static content so in order to have a &lt;em&gt;Contact&lt;/em&gt; page you need to use external service to process your contact form submissions. Some sources on the internet suggest to use &lt;a href="http://formspree.io/"&gt;Formspree&lt;/a&gt; developed and maintained by &lt;a href="http://assembly.com/"&gt;Assembly community&lt;/a&gt; (link on Formspree is broken so I am linking to their root). &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Developer's Gaze</title><description>Code. Sail. Live.</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Sat, 05 Sep 2015 20:57:59 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Add contact page to Ghost powered GitHub Pages with Flipmail</title><description>&lt;p&gt;GitHub Pages serve only static content so in order to have a &lt;em&gt;Contact&lt;/em&gt; page you need to use external service to process your contact form submissions. Some sources on the internet suggest to use &lt;a href="http://formspree.io/"&gt;Formspree&lt;/a&gt; developed and maintained by &lt;a href="http://assembly.com/"&gt;Assembly community&lt;/a&gt; (link on Formspree is broken so I am linking&lt;/p&gt;</description><link>http://localhost:2368/add-contact-page-to-ghost-powered-github-pages-with-flipmail/</link><guid isPermaLink="false">f0e1eb2a-4027-4c9d-b498-b343f8f7aa77</guid><dc:creator>Devgaze</dc:creator><pubDate>Sat, 05 Sep 2015 20:06:24 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Pages serve only static content so in order to have a &lt;em&gt;Contact&lt;/em&gt; page you need to use external service to process your contact form submissions. Some sources on the internet suggest to use &lt;a href="http://formspree.io/"&gt;Formspree&lt;/a&gt; developed and maintained by &lt;a href="http://assembly.com/"&gt;Assembly community&lt;/a&gt; (link on Formspree is broken so I am linking to their root). &lt;/p&gt;
 
 &lt;p&gt;The idea behind the project is pretty neat, you register your email with their service and than just point your &lt;code&gt;action&lt;/code&gt; attribute in your form to their site with your email as identifier.&lt;/p&gt;
 
@@ -33,18 +33,21 @@
 
 &lt;ol&gt;
 &lt;li&gt;Go to &lt;a href="http://flipmail.co/"&gt;http://flipmail.co/&lt;/a&gt; and enter your email address then click &lt;strong&gt;"Get started for free!"&lt;/strong&gt; button.  &lt;/li&gt;
-&lt;li&gt;On the right panel you will get generated HTML code, select all and copy &lt;br&gt;
-&lt;img src="http://localhost:2368/content/images/2015/09/register-flipmail.png" alt="register at flipmail"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;On the right panel you will get generated HTML code, select all and copy&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2015/09/register-flipmail.png" alt="register at flipmail" title=""&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Inside of your Ghost administration click on &lt;strong&gt;NEW POST&lt;/strong&gt; button and set your title to &lt;strong&gt;"Contact"&lt;/strong&gt;  &lt;/li&gt;
 &lt;li&gt;Paste your code from Flipmail.co into the body of your page  &lt;/li&gt;
 &lt;li&gt;Click on the &lt;code&gt;cog&lt;/code&gt; icon in the bottom right corner and check &lt;strong&gt;"Turn this post into a static page"&lt;/strong&gt;  &lt;/li&gt;
 &lt;li&gt;Publish your page  &lt;/li&gt;
-&lt;li&gt;Go to &lt;strong&gt;Settings &gt; Navigation&lt;/strong&gt; and add a new navigation item pointing it to URL of your Contact page and save &lt;br&gt;
-&lt;img src="http://localhost:2368/content/images/2015/09/navigation.png" alt="add contact to navigation" title=""&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://localhost:2368/add-contact-page-to-ghost-powered-github-pages-with-flipmail/"&gt;Generate static content with Buster&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href="http://localhost:2368/add-contact-page-to-ghost-powered-github-pages-with-flipmail/"&gt;Deploy to GitHub Pages&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;Check out your newly created contact page and submit the form. With first submission you are requesting activation of the service, so head to your inbox and click activation link. &lt;br&gt;
-&lt;img src="http://localhost:2368/content/images/2015/09/flipmail-confirm.png" alt="confirm at flipmail" title=""&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Go to &lt;strong&gt;Settings &gt; Navigation&lt;/strong&gt; and add a new navigation item pointing it to URL of your Contact page and save&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2015/09/navigation.png" alt="add contact to navigation" title=""&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://devgaze.github.io/setting-up-ghost-buster-and-github-pages-on-macos/#deployingcontenttogithub"&gt;Generate static content with Buster&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://devgaze.github.io/setting-up-ghost-buster-and-github-pages-on-macos/#deployingcontenttogithub"&gt;Deploy to GitHub Pages&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Check out your newly created contact page and submit the form. With first submission you are requesting activation of the service, so head to your inbox and click activation link.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2015/09/flipmail-confirm.png" alt="confirm at flipmail" title=""&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;And that's it, now flavour your contact form with some validation and redirection.&lt;/p&gt;
