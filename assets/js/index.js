@@ -21,23 +21,26 @@
         });
 
         // https://github.com/michael-lynch/reading-time
-        // $('.post').readingTime();
-        var $article = $('article.post');
+        $('.home-template article.post').each(function() {
+        
+            $(this).readingTime({
+                readingTimeTarget: $(this).find('.eta'),
+                wordCountTarget: $(this).find('.words'),
+                remotePath: $(this).attr('data-file'),
+                remoteTarget: $(this).attr('data-target'),
+                prependTimeString: "Reading time "
+            });
+            
+        });
+                
+        var $article = $('.post-template article.post');
         
         $article.readingTime({
             readingTimeTarget: $article.find('.eta'),
-            wordCountTarget: $article.find('.word-count')//,
-            // wordsPerMinute: 270,
-            // round: false,
-            // lang: 'en',
-            // success: function() {
-            //     console.log('It worked!');
-            // },
-            // error: function(message) {
-            //     console.log(message);
-            //     $article.find('.reading-time').remove();
-            // }
+            wordCountTarget: $article.find('.word-count'),
+            prependTimeString: "Reading time "
         });
+
 
     });
 
