@@ -22,7 +22,6 @@
 
         // https://github.com/michael-lynch/reading-time
         $('.home-template article.post').each(function() {
-        
             $(this).readingTime({
                 readingTimeTarget: $(this).find('.eta'),
                 wordCountTarget: $(this).find('.words'),
