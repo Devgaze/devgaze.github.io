@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Developer's Gaze</title><description>Code. Sail. Live.</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Sat, 05 Sep 2015 20:57:59 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Add contact page to Ghost powered GitHub Pages with Flipmail</title><description>&lt;p&gt;GitHub Pages serve only static content so in order to have a &lt;em&gt;Contact&lt;/em&gt; page you need to use external service to process your contact form submissions. Some sources on the internet suggest to use &lt;a href="http://formspree.io/"&gt;Formspree&lt;/a&gt; developed and maintained by &lt;a href="http://assembly.com/"&gt;Assembly community&lt;/a&gt; (link on Formspree is broken so I am linking&lt;/p&gt;</description><link>http://localhost:2368/add-contact-page-to-ghost-powered-github-pages-with-flipmail/</link><guid isPermaLink="false">f0e1eb2a-4027-4c9d-b498-b343f8f7aa77</guid><dc:creator>Devgaze</dc:creator><pubDate>Sat, 05 Sep 2015 20:06:24 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Pages serve only static content so in order to have a &lt;em&gt;Contact&lt;/em&gt; page you need to use external service to process your contact form submissions. Some sources on the internet suggest to use &lt;a href="http://formspree.io/"&gt;Formspree&lt;/a&gt; developed and maintained by &lt;a href="http://assembly.com/"&gt;Assembly community&lt;/a&gt; (link on Formspree is broken so I am linking to their root). &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Developer's Gaze</title><description>Code. Sail. Live.</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Sun, 06 Sep 2015 20:54:34 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Add contact page to Ghost powered GitHub Pages with Flipmail</title><description>&lt;p&gt;GitHub Pages serve only static content so in order to have a &lt;em&gt;Contact&lt;/em&gt; page you need to use external service to process your contact form submissions. Some sources on the internet suggest to use &lt;a href="http://formspree.io/"&gt;Formspree&lt;/a&gt; developed and maintained by &lt;a href="http://assembly.com/"&gt;Assembly community&lt;/a&gt; (link on Formspree is broken so I am linking&lt;/p&gt;</description><link>http://localhost:2368/add-contact-page-to-ghost-powered-github-pages-with-flipmail/</link><guid isPermaLink="false">f0e1eb2a-4027-4c9d-b498-b343f8f7aa77</guid><category>Ghost</category><category>Flipmail</category><dc:creator>Devgaze</dc:creator><pubDate>Sat, 05 Sep 2015 20:06:24 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Pages serve only static content so in order to have a &lt;em&gt;Contact&lt;/em&gt; page you need to use external service to process your contact form submissions. Some sources on the internet suggest to use &lt;a href="http://formspree.io/"&gt;Formspree&lt;/a&gt; developed and maintained by &lt;a href="http://assembly.com/"&gt;Assembly community&lt;/a&gt; (link on Formspree is broken so I am linking to their root). &lt;/p&gt;
 
 &lt;p&gt;The idea behind the project is pretty neat, you register your email with their service and than just point your &lt;code&gt;action&lt;/code&gt; attribute in your form to their site with your email as identifier.&lt;/p&gt;
 
@@ -69,44 +69,6 @@
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Even though Buster is originally written by &lt;a href="https://github.com/axitkhurana/buster"&gt;Akshit Khurana&lt;/a&gt;, I am using &lt;a href="https://github.com/joshgerdes/buster"&gt;Josh Gerdes's fork&lt;/a&gt; as it contains few important updates and, at the time of writing this article, it is 4 commits ahead of Akshit's.&lt;/p&gt;
-
-&lt;!--  
-* [GitHub Pages](#github-pages)
-* [Ghost blogging platform](#ghost)
-* [Buster static content generator](#buster)
-
-&lt;small&gt;*If you just want to see the setup, feel free to [skip the introductory text](#setup)*.&lt;/small&gt;
-
-####GitHub Pages
-
-As a web developer I honestly support open source community, and what is a better place than [GitHub](https://github.com/). GitHub provides a service called **GitHub Pages**, which enables you or your project a place to host a static web content (website or a blog).
-
-From developer's perspective this approach provides multiple benefits. For example, when you apply for new job, companies will often ask you your GitHub account so they can check your coding style and skill level. Not so often (it happened to me twice so far) they'll ask about your blog, interested in your way of thinking and industry savviness. By using GitHub Pages you have it all in one place. 
-
-[Learn more](https://pages.github.com/) on GitHub Pages official website.
-
-####Ghost
-
-Now, GitHub Pages website promotes [Jekyll](http://jekyllrb.com/) which is really powerful static site generator, but most of it's plugins won't work inside of GitHub Pages. One of the main things I was paying attention while deciding on which blogging platform to use was **workflow**.
-
-And Ghost came as the best choice. Key features that made up my mind were:
-
-* editor - fast, beautiful and to the point (when I saw it, I knew I want to use it)
-* the whole application - nothing is in your way and all you need is there
-* themes - no need to spend time on internals like tag filtering or pagination and RSS
-
-Ghost is **Node.js** based application and child of **John O'Nolan**, former deputy head of the Wordpress UI group, so no wonder that John and his team have done a great job!
-
-But... :) .... Ghost is not static content generator (*remember GitHub Pages serves only static content*).
-
-So, who you gonna call?
-
-&lt;small&gt;For more detailed information on Ghost, please [take a look at official user guide](http://support.ghost.org/user-guide/).&lt;/small&gt;
-
-####Buster
-
-Buster is **Python package**, developed by [Akshit Khurana](https://github.com/axitkhurana/buster), that serves as static content generator for Ghost. In my setup I am using [Josh Gerdes's fork](https://github.com/joshgerdes/buster) as, at the time of writing this article, his repo is 4 commits ahead of Akshit's, containing some important fixes.  
---&gt;
 
 &lt;h2 id="setup"&gt;Setup&lt;/h2&gt;
 

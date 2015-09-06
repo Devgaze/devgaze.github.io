@@ -20,6 +20,25 @@
             $("body").toggleClass("nav-opened nav-closed");
         });
 
+        // https://github.com/michael-lynch/reading-time
+        // $('.post').readingTime();
+        var $article = $('article.post');
+        
+        $article.readingTime({
+            readingTimeTarget: $article.find('.eta'),
+            wordCountTarget: $article.find('.word-count')//,
+            // wordsPerMinute: 270,
+            // round: false,
+            // lang: 'en',
+            // success: function() {
+            //     console.log('It worked!');
+            // },
+            // error: function(message) {
+            //     console.log(message);
+            //     $article.find('.reading-time').remove();
+            // }
+        });
+
     });
 
     // Arctic Scroll by Paul Adam Davis
