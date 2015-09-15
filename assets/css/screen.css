@@ -180,6 +180,21 @@ table { border-collapse: collapse; border-spacing: 0; }
         display: inline-block;
         margin: 0 1em;
     }
+p img {
+
+    width:auto;
+    max-width:100%;
+}
+
+.post-excerpt embed, .post-excerpt iframe { 
+    max-width: 100%; 
+    width: 100%;
+}
+
+.post-content embed, .post-content iframe { 
+    max-width: 100%; 
+    width: 100%;
+}
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
