@@ -1,0 +1,201 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700,400);
+@font-face {
+  font-family: 'entypo';
+  src: url("../fonts/entypo.eot?8lvrvh");
+  src: url("../fonts/entypo.eot?8lvrvh") format("embedded-opentype"), url("../fonts/entypo.ttf?8lvrvh") format("truetype"), url("../fonts/entypo.woff?8lvrvh") format("woff"), url("../fonts/entypo.svg?8lvrvh") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 20, ../../src/sass/app.scss */
+body {
+  font-size: 1em;
+  font-family: 'Open Sans' sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+/* line 27, ../../src/sass/app.scss */
+body #page-header {
+  background-color: rgba(47, 47, 47, 0.98);
+  padding: 1em;
+}
+/* line 32, ../../src/sass/app.scss */
+body #page-header nav#main-nav {
+  float: left;
+  width: 42px;
+  position: relative;
+}
+/* line 38, ../../src/sass/app.scss */
+body #page-header nav#main-nav button {
+  background-color: white;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(10, 10, 10, 0.2);
+  border-radius: .5em;
+  outline: none;
+  text-align: center;
+  padding: 1em 0;
+  cursor: pointer;
+}
+/* line 51, ../../src/sass/app.scss */
+body #page-header nav#main-nav ul {
+  display: block;
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  top: 0;
+  left: -320px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+/* line 64, ../../src/sass/app.scss */
+body #page-header nav#main-nav ul li a:link, body #page-header nav#main-nav ul li a:visited {
+  display: block;
+  padding: 0 1em;
+  color: white;
+}
+/* line 73, ../../src/sass/app.scss */
+body #page-header section#search-bar {
+  float: right;
+}
+/* line 79, ../../src/sass/app.scss */
+body #page-header section#search-bar form#search-form div {
+  border-radius: 36px;
+  border: 1px solid rgba(10, 10, 10, 0.2);
+  overflow: hidden;
+  width: 34px;
+  height: 34px;
+  position: relative;
+}
+/* line 88, ../../src/sass/app.scss */
+body #page-header section#search-bar form#search-form div .search-query {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  z-index: 10;
+  padding: .8em 2.5em 0 1em;
+  font-size: .8em;
+  color: rgba(10, 10, 10, 0.6);
+  font-style: oblique;
+}
+/* line 103, ../../src/sass/app.scss */
+body #page-header section#search-bar form#search-form div .search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border: none;
+  outline: none;
+  z-index: 20;
+  background-color: white;
+  padding: 0;
+  text-align: center;
+  display: block;
+  font-size: .8em;
+  cursor: pointer;
+}
+/* line 123, ../../src/sass/app.scss */
+body #page-header:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* line 133, ../../src/sass/app.scss */
+body article#main-content {
+  padding: 1em;
+}
+/* line 138, ../../src/sass/app.scss */
+body #page-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid rgba(10, 10, 10, 0.2);
+}
+/* line 145, ../../src/sass/app.scss */
+body #page-footer p {
+  text-align: center;
+  font-size: .75em;
+}
+/* line 152, ../../src/sass/app.scss */
+body .icon {
+  font-family: 'entypo';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 167, ../../src/sass/app.scss */
+body .icon.icon-search:before {
+  content: "\e800";
+}
+/* line 175, ../../src/sass/app.scss */
+body .icon.icon-menu:before {
+  content: "\e120";
+}
+
+@media (min-width: 992px) {
+  /* line 194, ../../src/sass/app.scss */
+  body #page-header nav#main-nav {
+    width: 50%;
+  }
+  /* line 198, ../../src/sass/app.scss */
+  body #page-header nav#main-nav button {
+    display: none;
+  }
+  /* line 203, ../../src/sass/app.scss */
+  body #page-header nav#main-nav ul {
+    position: relative;
+    left: 0;
+    display: block;
+    margin-top: .5em;
+    width: 100%;
+    height: auto;
+    text-align: justify;
+  }
+  /* line 213, ../../src/sass/app.scss */
+  body #page-header nav#main-nav ul:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+  /* line 220, ../../src/sass/app.scss */
+  body #page-header nav#main-nav ul li {
+    display: inline-block;
+  }
+  /* line 226, ../../src/sass/app.scss */
+  body #page-header section#search-bar {
+    float: right;
+    width: 320px;
+  }
+  /* line 233, ../../src/sass/app.scss */
+  body #page-header section#search-bar form#search-form div {
+    border-radius: 36px;
+    border: 1px solid rgba(10, 10, 10, 0.2);
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+  }
+  /* line 241, ../../src/sass/app.scss */
+  body #page-header section#search-bar form#search-form div .search-query {
+    width: 284px;
+  }
+}
+@media (min-width: 1100px) {
+  /* line 260, ../../src/sass/app.scss */
+  body {
+    width: 1100px;
+    margin: 0 auto;
+  }
+}
